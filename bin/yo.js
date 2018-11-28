@@ -1,5 +1,6 @@
+#!/usr/bin/env node
 const program = require('commander');
-const init = require('./init');
+const init = require('./yo-init');
 const {logSuccess, logError, logDoc} = require('./utils');
 
 program.version(require('../package').version).option('-v, --version', '版本号');

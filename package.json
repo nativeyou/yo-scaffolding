@@ -1,14 +1,17 @@
 {
-    "name": "gxm-cli",
-    "version": "1.0.0",
+    "name": "yo-scaffolding",
+    "version": "0.0.2",
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "gxm": "node bin/gxm.js"
+        "yo": "node bin/yo.js"
+    },
+    "bin": {
+        "yo": "bin/yo.js"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/nativeyou/gxm-cli"
+        "url": "https://github.com/nativeyou/yo-scaffolding"
     },
     "dependencies": {
         "chalk": "^2.4.1",

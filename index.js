@@ -1,1 +1,1 @@
-require('./bin/gxm');
+require('./bin/yo');
