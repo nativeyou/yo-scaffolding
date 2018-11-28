@@ -1,0 +1,22 @@
+{
+    "name": "gxm-cli",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "gxm": "node bin/gxm.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nativeyou/gxm-cli"
+    },
+    "dependencies": {
+        "chalk": "^2.4.1",
+        "commander": "^2.19.0",
+        "download-git-repo": "^1.1.0",
+        "fs": "^0.0.1-security",
+        "glob": "^7.1.3",
+        "inquirer": "^6.2.0",
+        "ora": "^3.0.0"
+    }
+}
