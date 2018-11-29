@@ -3,7 +3,6 @@ const ora = require('ora');
 const chalk = require('chalk');
 const fs = require('fs');
 const inquirer = require('inquirer');
-const logError = require('./utils').logError;
 
 module.exports = (name, template) => {
     if(!template){

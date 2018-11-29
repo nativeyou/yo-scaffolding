@@ -1,1 +1,1 @@
-# gxm-cli
+# yo-scaffolding
