@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 const program = require('commander');
 const init = require('./yo-init');
 const publish = require('./yo-publish');
