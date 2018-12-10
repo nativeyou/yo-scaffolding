@@ -3,10 +3,13 @@ const ora = require('ora');
 const chalk = require('chalk');
 const fs = require('fs');
 const inquirer = require('inquirer');
+const utils = require('./utils');
+
+const delFileAll = utils.delFileAll;
 
 module.exports = (name, template) => {
     if(!template){
-        template = 'nativeyou/gulp-project';
+        template = 'nativeyou/map-pack';
     }
 
     if(fs.existsSync(name)){
@@ -28,26 +31,6 @@ module.exports = (name, template) => {
         downloadFile(name, template);
     }
 };
-
-/**
- * 删除所有文件
- * @param path
- */
-function delFileAll(path) {
-    let files = [];
-    if(fs.existsSync(path)){
-        files = fs.readdirSync(path);
-        files.forEach(function (file, index) {
-            const curPath = path + '/' + file;
-            if(fs.statSync(curPath).isDirectory()) {
-                delFileAll(curPath);
-            } else {
-                fs.unlinkSync(curPath);
-            }
-        });
-        fs.rmdirSync(path);
-    }
-}
 
 /**
  * github下载文件

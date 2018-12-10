@@ -3,6 +3,7 @@
 const program = require('commander');
 const init = require('./yo-init');
 const publish = require('./yo-publish');
+const page = require('./yo-page');
 const {logSuccess, logError, logDoc} = require('./utils');
 
 program
@@ -19,7 +20,7 @@ program
     .description('创建页面。文件名为页面名称')
     .option('-m, --mobile', '创建移动端页面')
     .option('-r, --rem', '使用rem方式布局')
-    .action(function (pageName, options) {});
+    .action( (pageName, options) => { page(pageName, options) });
 
 program
     .command('publish [projectName]')

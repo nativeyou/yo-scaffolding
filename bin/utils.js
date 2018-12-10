@@ -40,9 +40,30 @@ const logDoc = () => {
     return '';
 };
 
+/**
+ * 删除所有文件
+ * @param path
+ */
+function delFileAll(path) {
+    let files = [];
+    if(fs.existsSync(path)){
+        files = fs.readdirSync(path);
+        files.forEach(function (file, index) {
+            const curPath = path + '/' + file;
+            if(fs.statSync(curPath).isDirectory()) {
+                delFileAll(curPath);
+            } else {
+                fs.unlinkSync(curPath);
+            }
+        });
+        fs.rmdirSync(path);
+    }
+}
+
 module.exports = {
     findBase: findBase,
     logError: logError,
     logSuccess: logSuccess,
-    logDoc: logDoc
+    logDoc: logDoc,
+    delFileAll: delFileAll
 };
