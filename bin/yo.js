@@ -42,8 +42,6 @@ if(!process.argv.slice(2).length) {
 
 const commandList = ['-h','-V','-v','init','publish','page'];
 
-console.log(process.argv);
-
 if(commandList.toString().indexOf(process.argv[2]) === -1) {
     console.log(logError('gxm-cli:命令不正确\n请使用-h或--help查看，或参考') + logDoc());
 }
